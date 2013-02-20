@@ -35,16 +35,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReference" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionDefinition" ordered="false"
         lowerBound="1" eType="#//ExtensionDefinition" eOpposite="#//ExtensionDefinition/extensionAttributeDefinitions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExtensionAttributeValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueRef" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extensionAttributeDefinition"
         ordered="false" lowerBound="1" eType="#//ExtensionAttributeDefinition"/>
@@ -53,7 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="textFormat" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="text/plain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//BaseElement">
@@ -66,7 +66,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="errorRefs" ordered="false"
         upperBound="-1" eType="#//Error"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="implementationRef" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//RootElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
@@ -78,9 +78,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemKind" ordered="false"
         lowerBound="1" eType="#//ItemKind"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structureRef" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="import" ordered="false"
         eType="#//Import"/>
@@ -147,7 +147,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataInput" eSuperTypes="#//ItemAwareElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputSetWithOptional" ordered="false"
         upperBound="-1" eType="#//InputSet" volatile="true" derived="true" eOpposite="#//InputSet/optionalInputRefs"/>
@@ -184,7 +184,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataOutput" eSuperTypes="#//ItemAwareElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputSetWithOptional"
         ordered="false" upperBound="-1" eType="#//OutputSet" volatile="true" derived="true"
@@ -395,10 +395,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParticipantMultiplicity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minimum" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maximum" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageFlowAssociation" eSuperTypes="#//BaseElement">
@@ -458,7 +458,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="evaluatesToTypeRef" ordered="false"
         lowerBound="1" eType="#//ItemDefinition"/>
   </eClassifiers>
@@ -479,7 +479,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//Activity #//InteractionNode"/>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//FlowNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForCompensation" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopCharacteristics" ordered="false"
         eType="#//LoopCharacteristics" containment="true"/>
@@ -498,17 +498,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataOutputAssociations"
         ordered="false" upperBound="-1" eType="#//DataOutputAssociation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startQuantity" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completionQuantity" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LoopCharacteristics" abstract="true"
       eSuperTypes="#//BaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BoundaryEvent" eSuperTypes="#//CatchEvent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelActivity" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachedToRef" ordered="false"
         lowerBound="1" eType="#//Activity" eOpposite="#//Activity/boundaryEventRefs"/>
@@ -577,7 +577,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EventBasedGateway" eSuperTypes="#//Gateway">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instantiate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventGatewayType" ordered="false"
         lowerBound="1" eType="#//EventBasedGatewayType"/>
@@ -607,9 +607,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" ordered="false"
         lowerBound="1" eType="#//RelationshipDirection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sources" ordered="false"
-        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targets" ordered="false"
-        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        lowerBound="1" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationshipDirection">
     <eLiterals name="None"/>
@@ -619,7 +619,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Extension">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mustUnderstand" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" ordered="false"
         lowerBound="1" eType="#//ExtensionDefinition" containment="true"/>
@@ -641,7 +641,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="EndEvent" eSuperTypes="#//ThrowEvent"/>
   <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//CatchEvent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInterrupting" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CancelEventDefinition" eSuperTypes="#//EventDefinition"/>
@@ -707,7 +707,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ImplicitThrowEvent" eSuperTypes="#//ThrowEvent"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataObject" eSuperTypes="#//FlowElement #//ItemAwareElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCollection" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataStore" eSuperTypes="#//ItemAwareElement #//RootElement">
@@ -716,7 +716,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isUnlimited" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataStoreReference" eSuperTypes="#//FlowElement #//ItemAwareElement">
@@ -790,7 +790,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="textFormat" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="text/plain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//Artifact">
@@ -824,7 +824,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubProcess" eSuperTypes="#//Activity #//FlowElementsContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggeredByEvent" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifacts" ordered="false"
         upperBound="-1" eType="#//Artifact" containment="true"/>
@@ -837,7 +837,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiInstanceLoopCharacteristics" eSuperTypes="#//LoopCharacteristics">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSequential" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="behavior" ordered="false"
         lowerBound="1" eType="#//MultiInstanceBehavior" defaultValueLiteral="All"/>
@@ -868,7 +868,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StandardLoopCharacteristics" eSuperTypes="#//LoopCharacteristics">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testBefore" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopCondition" ordered="false"
         eType="#//Expression" containment="true"/>
@@ -891,7 +891,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instantiate" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operationRef" ordered="false"
         eType="#//Operation"/>
@@ -914,7 +914,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ordering" ordered="false"
         lowerBound="1" eType="#//AdHocOrdering"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelRemainingInstances"
-        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AdHocOrdering">
@@ -943,10 +943,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetNamespace" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionLanguage" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="http://www.w3.org/1999/XPath"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeLanguage" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="http://www.w3.org/2001/XMLSchema"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" ordered="false"
         upperBound="-1" eType="#//Import" containment="true"/>
