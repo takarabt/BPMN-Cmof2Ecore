@@ -82,7 +82,7 @@ public class DCFactoryImpl extends EFactoryImpl implements DCFactory {
 			case DCPackage.INTEGER:
 				return createIntegerFromString(eDataType, initialValue);
 			case DCPackage.REAL:
-				return createRealFromString(eDataType, initialValue);
+			//	return createRealFromString(eDataType, initialValue);
 			case DCPackage.STRING:
 				return createStringFromString(eDataType, initialValue);
 			default:
@@ -182,9 +182,9 @@ public class DCFactoryImpl extends EFactoryImpl implements DCFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Real createRealFromString(EDataType eDataType, String initialValue) {
+/*	public Real createRealFromString(EDataType eDataType, String initialValue) {
 		return (Real)super.createFromString(eDataType, initialValue);
-	}
+	}*/
 
 	/**
 	 * <!-- begin-user-doc -->

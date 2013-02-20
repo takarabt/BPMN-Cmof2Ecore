@@ -461,7 +461,7 @@ public class DCPackageImpl extends EPackageImpl implements DCPackage {
 		// Initialize data types
 		initEDataType(booleanEDataType, Boolean.class, "Boolean", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(integerEDataType, Integer.class, "Integer", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(realEDataType, Real.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		//initEDataType(realEDataType, Real.class, "Real", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringEDataType, String.class, "String", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
