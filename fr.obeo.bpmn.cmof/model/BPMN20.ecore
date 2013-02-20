@@ -9,7 +9,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" ordered="false"
         lowerBound="1" upperBound="-1" eType="#//Operation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="implementationRef" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RootElement" abstract="true" eSuperTypes="#//BaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="BaseElement" abstract="true">
