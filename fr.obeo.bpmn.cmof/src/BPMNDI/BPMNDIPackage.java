@@ -699,33 +699,33 @@ public interface BPMNDIPackage extends EPackage {
 	EReference getBPMNShape_BpmnElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#getIsHorizontal <em>Is Horizontal</em>}'.
+	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#isIsHorizontal <em>Is Horizontal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Horizontal</em>'.
-	 * @see BPMNDI.BPMNShape#getIsHorizontal()
+	 * @see BPMNDI.BPMNShape#isIsHorizontal()
 	 * @see #getBPMNShape()
 	 * @generated
 	 */
 	EAttribute getBPMNShape_IsHorizontal();
 
 	/**
-	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#getIsExpanded <em>Is Expanded</em>}'.
+	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#isIsExpanded <em>Is Expanded</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Expanded</em>'.
-	 * @see BPMNDI.BPMNShape#getIsExpanded()
+	 * @see BPMNDI.BPMNShape#isIsExpanded()
 	 * @see #getBPMNShape()
 	 * @generated
 	 */
 	EAttribute getBPMNShape_IsExpanded();
 
 	/**
-	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#getIsMarkerVisible <em>Is Marker Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#isIsMarkerVisible <em>Is Marker Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Marker Visible</em>'.
-	 * @see BPMNDI.BPMNShape#getIsMarkerVisible()
+	 * @see BPMNDI.BPMNShape#isIsMarkerVisible()
 	 * @see #getBPMNShape()
 	 * @generated
 	 */
@@ -743,11 +743,11 @@ public interface BPMNDIPackage extends EPackage {
 	EReference getBPMNShape_Label();
 
 	/**
-	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#getIsMessageVisible <em>Is Message Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link BPMNDI.BPMNShape#isIsMessageVisible <em>Is Message Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Message Visible</em>'.
-	 * @see BPMNDI.BPMNShape#getIsMessageVisible()
+	 * @see BPMNDI.BPMNShape#isIsMessageVisible()
 	 * @see #getBPMNShape()
 	 * @generated
 	 */

@@ -8,7 +8,6 @@ package DC;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 
 /**
@@ -224,46 +223,6 @@ public interface DCPackage extends EPackage {
 	 */
 	int BOUNDS_FEATURE_COUNT = 4;
 
-	/**
-	 * The meta object id for the '<em>Boolean</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Boolean
-	 * @see DC.impl.DCPackageImpl#getBoolean()
-	 * @generated
-	 */
-	int BOOLEAN = 3;
-
-	/**
-	 * The meta object id for the '<em>Integer</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Integer
-	 * @see DC.impl.DCPackageImpl#getInteger()
-	 * @generated
-	 */
-	int INTEGER = 4;
-
-	/**
-	 * The meta object id for the '<em>Real</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Real
-	 * @see DC.impl.DCPackageImpl#getReal()
-	 * @generated
-	 */
-	int REAL = 5;
-
-	/**
-	 * The meta object id for the '<em>String</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see String
-	 * @see DC.impl.DCPackageImpl#getString()
-	 * @generated
-	 */
-	int STRING = 6;
-
 
 	/**
 	 * Returns the meta object for class '{@link DC.Font <em>Font</em>}'.
@@ -298,44 +257,44 @@ public interface DCPackage extends EPackage {
 	EAttribute getFont_Size();
 
 	/**
-	 * Returns the meta object for the attribute '{@link DC.Font#getIsBold <em>Is Bold</em>}'.
+	 * Returns the meta object for the attribute '{@link DC.Font#isIsBold <em>Is Bold</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Bold</em>'.
-	 * @see DC.Font#getIsBold()
+	 * @see DC.Font#isIsBold()
 	 * @see #getFont()
 	 * @generated
 	 */
 	EAttribute getFont_IsBold();
 
 	/**
-	 * Returns the meta object for the attribute '{@link DC.Font#getIsItalic <em>Is Italic</em>}'.
+	 * Returns the meta object for the attribute '{@link DC.Font#isIsItalic <em>Is Italic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Italic</em>'.
-	 * @see DC.Font#getIsItalic()
+	 * @see DC.Font#isIsItalic()
 	 * @see #getFont()
 	 * @generated
 	 */
 	EAttribute getFont_IsItalic();
 
 	/**
-	 * Returns the meta object for the attribute '{@link DC.Font#getIsUnderline <em>Is Underline</em>}'.
+	 * Returns the meta object for the attribute '{@link DC.Font#isIsUnderline <em>Is Underline</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Underline</em>'.
-	 * @see DC.Font#getIsUnderline()
+	 * @see DC.Font#isIsUnderline()
 	 * @see #getFont()
 	 * @generated
 	 */
 	EAttribute getFont_IsUnderline();
 
 	/**
-	 * Returns the meta object for the attribute '{@link DC.Font#getIsStrikeThrough <em>Is Strike Through</em>}'.
+	 * Returns the meta object for the attribute '{@link DC.Font#isIsStrikeThrough <em>Is Strike Through</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Strike Through</em>'.
-	 * @see DC.Font#getIsStrikeThrough()
+	 * @see DC.Font#isIsStrikeThrough()
 	 * @see #getFont()
 	 * @generated
 	 */
@@ -426,50 +385,6 @@ public interface DCPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBounds_Height();
-
-	/**
-	 * Returns the meta object for data type '{@link Boolean <em>Boolean</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Boolean</em>'.
-	 * @see Boolean
-	 * @model instanceClass="java.lang.Object"
-	 * @generated
-	 */
-	EDataType getBoolean();
-
-	/**
-	 * Returns the meta object for data type '{@link Integer <em>Integer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Integer</em>'.
-	 * @see Integer
-	 * @model instanceClass="java.lang.Object"
-	 * @generated
-	 */
-	EDataType getInteger();
-
-	/**
-	 * Returns the meta object for data type '{@link Real <em>Real</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Real</em>'.
-	 * @see Real
-	 * @model instanceClass="java.lang.Object"
-	 * @generated
-	 */
-	EDataType getReal();
-
-	/**
-	 * Returns the meta object for data type '{@link String <em>String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>String</em>'.
-	 * @see String
-	 * @model instanceClass="java.lang.Object"
-	 * @generated
-	 */
-	EDataType getString();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -618,46 +533,6 @@ public interface DCPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOUNDS__HEIGHT = eINSTANCE.getBounds_Height();
-
-		/**
-		 * The meta object literal for the '<em>Boolean</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Boolean
-		 * @see DC.impl.DCPackageImpl#getBoolean()
-		 * @generated
-		 */
-		EDataType BOOLEAN = eINSTANCE.getBoolean();
-
-		/**
-		 * The meta object literal for the '<em>Integer</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Integer
-		 * @see DC.impl.DCPackageImpl#getInteger()
-		 * @generated
-		 */
-		EDataType INTEGER = eINSTANCE.getInteger();
-
-		/**
-		 * The meta object literal for the '<em>Real</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Real
-		 * @see DC.impl.DCPackageImpl#getReal()
-		 * @generated
-		 */
-		EDataType REAL = eINSTANCE.getReal();
-
-		/**
-		 * The meta object literal for the '<em>String</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see String
-		 * @see DC.impl.DCPackageImpl#getString()
-		 * @generated
-		 */
-		EDataType STRING = eINSTANCE.getString();
 
 	}
 

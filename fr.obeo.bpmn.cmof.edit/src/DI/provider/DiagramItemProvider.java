@@ -136,7 +136,7 @@ public class DiagramItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -193,8 +193,7 @@ public class DiagramItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((Diagram)object).getName();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Diagram)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Diagram_type") :
 			getString("_UI_Diagram_type") + " " + label;

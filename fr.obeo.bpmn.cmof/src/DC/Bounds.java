@@ -38,12 +38,12 @@ public interface Bounds extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(Real)
+	 * @see #setX(float)
 	 * @see DC.DCPackage#getBounds_X()
-	 * @model default="0" dataType="DC.Real" required="true" ordered="false"
+	 * @model default="0" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getX();
+	float getX();
 
 	/**
 	 * Sets the value of the '{@link DC.Bounds#getX <em>X</em>}' attribute.
@@ -53,7 +53,7 @@ public interface Bounds extends EObject {
 	 * @see #getX()
 	 * @generated
 	 */
-	void setX(Object value);
+	void setX(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Y</b></em>' attribute.
@@ -65,12 +65,12 @@ public interface Bounds extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(Real)
+	 * @see #setY(float)
 	 * @see DC.DCPackage#getBounds_Y()
-	 * @model default="0" dataType="DC.Real" required="true" ordered="false"
+	 * @model default="0" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getY();
+	float getY();
 
 	/**
 	 * Sets the value of the '{@link DC.Bounds#getY <em>Y</em>}' attribute.
@@ -80,7 +80,7 @@ public interface Bounds extends EObject {
 	 * @see #getY()
 	 * @generated
 	 */
-	void setY(Object value);
+	void setY(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -91,12 +91,12 @@ public interface Bounds extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(Real)
+	 * @see #setWidth(float)
 	 * @see DC.DCPackage#getBounds_Width()
-	 * @model dataType="DC.Real" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Object getWidth();
+	float getWidth();
 
 	/**
 	 * Sets the value of the '{@link DC.Bounds#getWidth <em>Width</em>}' attribute.
@@ -106,7 +106,7 @@ public interface Bounds extends EObject {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(Object value);
+	void setWidth(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
@@ -117,12 +117,12 @@ public interface Bounds extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(Real)
+	 * @see #setHeight(float)
 	 * @see DC.DCPackage#getBounds_Height()
-	 * @model dataType="DC.Real" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Object getHeight();
+	float getHeight();
 
 	/**
 	 * Sets the value of the '{@link DC.Bounds#getHeight <em>Height</em>}' attribute.
@@ -132,6 +132,6 @@ public interface Bounds extends EObject {
 	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeight(Object value);
+	void setHeight(float value);
 
 } // Bounds

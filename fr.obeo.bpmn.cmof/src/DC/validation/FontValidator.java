@@ -16,10 +16,10 @@ package DC.validation;
 public interface FontValidator {
 	boolean validate();
 
-	boolean validateName(Object value);
-	boolean validateSize(Object value);
-	boolean validateIsBold(Object value);
-	boolean validateIsItalic(Object value);
-	boolean validateIsUnderline(Object value);
-	boolean validateIsStrikeThrough(Object value);
+	boolean validateName(String value);
+	boolean validateSize(float value);
+	boolean validateIsBold(boolean value);
+	boolean validateIsItalic(boolean value);
+	boolean validateIsUnderline(boolean value);
+	boolean validateIsStrikeThrough(boolean value);
 }

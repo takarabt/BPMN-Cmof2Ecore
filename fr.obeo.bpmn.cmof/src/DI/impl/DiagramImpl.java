@@ -47,7 +47,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,7 +57,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name = NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
@@ -67,7 +67,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object DOCUMENTATION_EDEFAULT = null;
+	protected static final String DOCUMENTATION_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
@@ -77,7 +77,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object documentation = DOCUMENTATION_EDEFAULT;
+	protected String documentation = DOCUMENTATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getResolution() <em>Resolution</em>}' attribute.
@@ -87,7 +87,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object RESOLUTION_EDEFAULT = null;
+	protected static final float RESOLUTION_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getResolution() <em>Resolution</em>}' attribute.
@@ -97,7 +97,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object resolution = RESOLUTION_EDEFAULT;
+	protected float resolution = RESOLUTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -132,8 +132,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.DIAGRAM__NAME, oldName, name));
@@ -144,7 +144,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getDocumentation() {
+	public String getDocumentation() {
 		return documentation;
 	}
 
@@ -153,8 +153,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDocumentation(Object newDocumentation) {
-		Object oldDocumentation = documentation;
+	public void setDocumentation(String newDocumentation) {
+		String oldDocumentation = documentation;
 		documentation = newDocumentation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.DIAGRAM__DOCUMENTATION, oldDocumentation, documentation));
@@ -165,7 +165,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getResolution() {
+	public float getResolution() {
 		return resolution;
 	}
 
@@ -174,8 +174,8 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResolution(Object newResolution) {
-		Object oldResolution = resolution;
+	public void setResolution(float newResolution) {
+		float oldResolution = resolution;
 		resolution = newResolution;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DIPackage.DIAGRAM__RESOLUTION, oldResolution, resolution));
@@ -248,13 +248,13 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case DIPackage.DIAGRAM__NAME:
-				setName((Object)newValue);
+				setName((String)newValue);
 				return;
 			case DIPackage.DIAGRAM__DOCUMENTATION:
-				setDocumentation((Object)newValue);
+				setDocumentation((String)newValue);
 				return;
 			case DIPackage.DIAGRAM__RESOLUTION:
-				setResolution((Object)newValue);
+				setResolution((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -294,7 +294,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
 			case DIPackage.DIAGRAM__DOCUMENTATION:
 				return DOCUMENTATION_EDEFAULT == null ? documentation != null : !DOCUMENTATION_EDEFAULT.equals(documentation);
 			case DIPackage.DIAGRAM__RESOLUTION:
-				return RESOLUTION_EDEFAULT == null ? resolution != null : !RESOLUTION_EDEFAULT.equals(resolution);
+				return resolution != RESOLUTION_EDEFAULT;
 			case DIPackage.DIAGRAM__OWNED_STYLE:
 				return !getOwnedStyle().isEmpty();
 			case DIPackage.DIAGRAM__ROOT_ELEMENT:

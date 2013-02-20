@@ -6,7 +6,6 @@
  */
 package DC.impl;
 
-import DC.DCFactory;
 import DC.DCPackage;
 import DC.Point;
 
@@ -40,7 +39,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object X_EDEFAULT = (Object)DCFactory.eINSTANCE.createFromString(DCPackage.eINSTANCE.getReal(), "0");
+	protected static final float X_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -50,7 +49,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object x = X_EDEFAULT;
+	protected float x = X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -60,7 +59,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object Y_EDEFAULT = (Object)DCFactory.eINSTANCE.createFromString(DCPackage.eINSTANCE.getReal(), "0");
+	protected static final float Y_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -70,7 +69,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object y = Y_EDEFAULT;
+	protected float y = Y_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,7 +95,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getX() {
+	public float getX() {
 		return x;
 	}
 
@@ -105,8 +104,8 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(Object newX) {
-		Object oldX = x;
+	public void setX(float newX) {
+		float oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.POINT__X, oldX, x));
@@ -117,7 +116,7 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getY() {
+	public float getY() {
 		return y;
 	}
 
@@ -126,8 +125,8 @@ public class PointImpl extends EObjectImpl implements Point {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(Object newY) {
-		Object oldY = y;
+	public void setY(float newY) {
+		float oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.POINT__Y, oldY, y));
@@ -158,10 +157,10 @@ public class PointImpl extends EObjectImpl implements Point {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case DCPackage.POINT__X:
-				setX((Object)newValue);
+				setX((Float)newValue);
 				return;
 			case DCPackage.POINT__Y:
-				setY((Object)newValue);
+				setY((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,9 +193,9 @@ public class PointImpl extends EObjectImpl implements Point {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case DCPackage.POINT__X:
-				return X_EDEFAULT == null ? x != null : !X_EDEFAULT.equals(x);
+				return x != X_EDEFAULT;
 			case DCPackage.POINT__Y:
-				return Y_EDEFAULT == null ? y != null : !Y_EDEFAULT.equals(y);
+				return y != Y_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

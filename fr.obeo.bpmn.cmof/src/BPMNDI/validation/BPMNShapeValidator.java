@@ -22,11 +22,11 @@ public interface BPMNShapeValidator {
 	boolean validate();
 
 	boolean validateBpmnElement(BaseElement value);
-	boolean validateIsHorizontal(Object value);
-	boolean validateIsExpanded(Object value);
-	boolean validateIsMarkerVisible(Object value);
+	boolean validateIsHorizontal(boolean value);
+	boolean validateIsExpanded(boolean value);
+	boolean validateIsMarkerVisible(boolean value);
 	boolean validateLabel(BPMNLabel value);
-	boolean validateIsMessageVisible(Object value);
+	boolean validateIsMessageVisible(boolean value);
 	boolean validateParticipantBandKind(ParticipantBandKind value);
 	boolean validateChoreographyActivityShape(BPMNShape value);
 }

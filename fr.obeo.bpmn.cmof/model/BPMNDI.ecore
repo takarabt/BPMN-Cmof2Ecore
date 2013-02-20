@@ -11,15 +11,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="bpmnElement" ordered="false"
         eType="ecore:EClass BPMN20.ecore#//BaseElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isHorizontal" ordered="false"
-        eType="ecore:EDataType DC.ecore#//Boolean"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isExpanded" ordered="false"
-        eType="ecore:EDataType DC.ecore#//Boolean"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMarkerVisible" ordered="false"
-        eType="ecore:EDataType DC.ecore#//Boolean"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" ordered="false"
         eType="#//BPMNLabel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMessageVisible" ordered="false"
-        eType="ecore:EDataType DC.ecore#//Boolean"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="participantBandKind" ordered="false"
         eType="#//ParticipantBandKind"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choreographyActivityShape"

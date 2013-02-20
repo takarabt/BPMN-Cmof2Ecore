@@ -120,7 +120,7 @@ public class BPMNShapeItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -142,7 +142,7 @@ public class BPMNShapeItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -164,7 +164,7 @@ public class BPMNShapeItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -186,7 +186,7 @@ public class BPMNShapeItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -284,11 +284,8 @@ public class BPMNShapeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((BPMNShape)object).getIsHorizontal();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_BPMNShape_type") :
-			getString("_UI_BPMNShape_type") + " " + label;
+		BPMNShape bpmnShape = (BPMNShape)object;
+		return getString("_UI_BPMNShape_type") + " " + bpmnShape.isIsHorizontal();
 	}
 
 	/**

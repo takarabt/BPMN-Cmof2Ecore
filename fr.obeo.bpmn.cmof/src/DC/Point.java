@@ -36,12 +36,12 @@ public interface Point extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(Real)
+	 * @see #setX(float)
 	 * @see DC.DCPackage#getPoint_X()
-	 * @model default="0" dataType="DC.Real" required="true" ordered="false"
+	 * @model default="0" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getX();
+	float getX();
 
 	/**
 	 * Sets the value of the '{@link DC.Point#getX <em>X</em>}' attribute.
@@ -51,7 +51,7 @@ public interface Point extends EObject {
 	 * @see #getX()
 	 * @generated
 	 */
-	void setX(Object value);
+	void setX(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Y</b></em>' attribute.
@@ -63,12 +63,12 @@ public interface Point extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(Real)
+	 * @see #setY(float)
 	 * @see DC.DCPackage#getPoint_Y()
-	 * @model default="0" dataType="DC.Real" required="true" ordered="false"
+	 * @model default="0" required="true" ordered="false"
 	 * @generated
 	 */
-	Object getY();
+	float getY();
 
 	/**
 	 * Sets the value of the '{@link DC.Point#getY <em>Y</em>}' attribute.
@@ -78,6 +78,6 @@ public interface Point extends EObject {
 	 * @see #getY()
 	 * @generated
 	 */
-	void setY(Object value);
+	void setY(float value);
 
 } // Point

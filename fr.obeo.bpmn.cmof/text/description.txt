@@ -656,11 +656,11 @@ Package BPMNDI <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
 
   Class BPMNShape -> LabeledShape
     Reference bpmnElement : BaseElement
-    Attribute isHorizontal : Boolean
-    Attribute isExpanded : Boolean
-    Attribute isMarkerVisible : Boolean
+    Attribute isHorizontal : EBoolean
+    Attribute isExpanded : EBoolean
+    Attribute isMarkerVisible : EBoolean
     Reference label : BPMNLabel
-    Attribute isMessageVisible : Boolean
+    Attribute isMessageVisible : EBoolean
     Attribute participantBandKind : ParticipantBandKind
     Reference choreographyActivityShape : BPMNShape
 
@@ -703,9 +703,9 @@ Package DI <http://www.omg.org/spec/DD/20100524/DI-XMI>
     Reference /style : Style
 
   Class Diagram
-    Attribute name : String
-    Attribute documentation : String
-    Attribute resolution : Real
+    Attribute name : EString
+    Attribute documentation : EString
+    Attribute resolution : EFloat
     Reference /ownedStyle : Style<<0..*>>
     Reference /rootElement : DiagramElement<<1..1>>
 
@@ -737,28 +737,20 @@ Package DI <http://www.omg.org/spec/DD/20100524/DI-XMI>
 Package DC <http://www.omg.org/spec/DD/20100524/DC-XMI>
 
   Class Font
-    Attribute name : String
-    Attribute size : Real
-    Attribute isBold : Boolean
-    Attribute isItalic : Boolean
-    Attribute isUnderline : Boolean
-    Attribute isStrikeThrough : Boolean
+    Attribute name : EString
+    Attribute size : EFloat
+    Attribute isBold : EBoolean
+    Attribute isItalic : EBoolean
+    Attribute isUnderline : EBoolean
+    Attribute isStrikeThrough : EBoolean
     Operation non_negative_size(EDiagnosticChain, EMap) : EBoolean
 
   Class Point
-    Attribute x : Real<<1..1>>
-    Attribute y : Real<<1..1>>
+    Attribute x : EFloat<<1..1>>
+    Attribute y : EFloat<<1..1>>
 
   Class Bounds
-    Attribute x : Real<<1..1>>
-    Attribute y : Real<<1..1>>
-    Attribute width : Real<<1..1>>
-    Attribute height : Real<<1..1>>
-
-  DataType Boolean <Boolean>
-
-  DataType Integer <Integer>
-
-  DataType Real <Real>
-
-  DataType String <String>
+    Attribute x : EFloat<<1..1>>
+    Attribute y : EFloat<<1..1>>
+    Attribute width : EFloat<<1..1>>
+    Attribute height : EFloat<<1..1>>

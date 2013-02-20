@@ -7,7 +7,6 @@
 package DC.impl;
 
 import DC.Bounds;
-import DC.DCFactory;
 import DC.DCPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -42,7 +41,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object X_EDEFAULT = (Object)DCFactory.eINSTANCE.createFromString(DCPackage.eINSTANCE.getReal(), "0");
+	protected static final float X_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
@@ -52,7 +51,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object x = X_EDEFAULT;
+	protected float x = X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -62,7 +61,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object Y_EDEFAULT = (Object)DCFactory.eINSTANCE.createFromString(DCPackage.eINSTANCE.getReal(), "0");
+	protected static final float Y_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
@@ -72,7 +71,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object y = Y_EDEFAULT;
+	protected float y = Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -82,7 +81,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object WIDTH_EDEFAULT = null;
+	protected static final float WIDTH_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -92,7 +91,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object width = WIDTH_EDEFAULT;
+	protected float width = WIDTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -102,7 +101,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object HEIGHT_EDEFAULT = null;
+	protected static final float HEIGHT_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -112,7 +111,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object height = HEIGHT_EDEFAULT;
+	protected float height = HEIGHT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -138,7 +137,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getX() {
+	public float getX() {
 		return x;
 	}
 
@@ -147,8 +146,8 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setX(Object newX) {
-		Object oldX = x;
+	public void setX(float newX) {
+		float oldX = x;
 		x = newX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.BOUNDS__X, oldX, x));
@@ -159,7 +158,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getY() {
+	public float getY() {
 		return y;
 	}
 
@@ -168,8 +167,8 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setY(Object newY) {
-		Object oldY = y;
+	public void setY(float newY) {
+		float oldY = y;
 		y = newY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.BOUNDS__Y, oldY, y));
@@ -180,7 +179,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getWidth() {
+	public float getWidth() {
 		return width;
 	}
 
@@ -189,8 +188,8 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(Object newWidth) {
-		Object oldWidth = width;
+	public void setWidth(float newWidth) {
+		float oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.BOUNDS__WIDTH, oldWidth, width));
@@ -201,7 +200,7 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getHeight() {
+	public float getHeight() {
 		return height;
 	}
 
@@ -210,8 +209,8 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeight(Object newHeight) {
-		Object oldHeight = height;
+	public void setHeight(float newHeight) {
+		float oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.BOUNDS__HEIGHT, oldHeight, height));
@@ -246,16 +245,16 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case DCPackage.BOUNDS__X:
-				setX((Object)newValue);
+				setX((Float)newValue);
 				return;
 			case DCPackage.BOUNDS__Y:
-				setY((Object)newValue);
+				setY((Float)newValue);
 				return;
 			case DCPackage.BOUNDS__WIDTH:
-				setWidth((Object)newValue);
+				setWidth((Float)newValue);
 				return;
 			case DCPackage.BOUNDS__HEIGHT:
-				setHeight((Object)newValue);
+				setHeight((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -294,13 +293,13 @@ public class BoundsImpl extends EObjectImpl implements Bounds {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case DCPackage.BOUNDS__X:
-				return X_EDEFAULT == null ? x != null : !X_EDEFAULT.equals(x);
+				return x != X_EDEFAULT;
 			case DCPackage.BOUNDS__Y:
-				return Y_EDEFAULT == null ? y != null : !Y_EDEFAULT.equals(y);
+				return y != Y_EDEFAULT;
 			case DCPackage.BOUNDS__WIDTH:
-				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
+				return width != WIDTH_EDEFAULT;
 			case DCPackage.BOUNDS__HEIGHT:
-				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
+				return height != HEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

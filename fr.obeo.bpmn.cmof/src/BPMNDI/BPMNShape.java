@@ -19,11 +19,11 @@ import DI.LabeledShape;
  * The following features are supported:
  * <ul>
  *   <li>{@link BPMNDI.BPMNShape#getBpmnElement <em>Bpmn Element</em>}</li>
- *   <li>{@link BPMNDI.BPMNShape#getIsHorizontal <em>Is Horizontal</em>}</li>
- *   <li>{@link BPMNDI.BPMNShape#getIsExpanded <em>Is Expanded</em>}</li>
- *   <li>{@link BPMNDI.BPMNShape#getIsMarkerVisible <em>Is Marker Visible</em>}</li>
+ *   <li>{@link BPMNDI.BPMNShape#isIsHorizontal <em>Is Horizontal</em>}</li>
+ *   <li>{@link BPMNDI.BPMNShape#isIsExpanded <em>Is Expanded</em>}</li>
+ *   <li>{@link BPMNDI.BPMNShape#isIsMarkerVisible <em>Is Marker Visible</em>}</li>
  *   <li>{@link BPMNDI.BPMNShape#getLabel <em>Label</em>}</li>
- *   <li>{@link BPMNDI.BPMNShape#getIsMessageVisible <em>Is Message Visible</em>}</li>
+ *   <li>{@link BPMNDI.BPMNShape#isIsMessageVisible <em>Is Message Visible</em>}</li>
  *   <li>{@link BPMNDI.BPMNShape#getParticipantBandKind <em>Participant Band Kind</em>}</li>
  *   <li>{@link BPMNDI.BPMNShape#getChoreographyActivityShape <em>Choreography Activity Shape</em>}</li>
  * </ul>
@@ -69,22 +69,22 @@ public interface BPMNShape extends LabeledShape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Horizontal</em>' attribute.
-	 * @see #setIsHorizontal(Boolean)
+	 * @see #setIsHorizontal(boolean)
 	 * @see BPMNDI.BPMNDIPackage#getBPMNShape_IsHorizontal()
-	 * @model dataType="DC.Boolean" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getIsHorizontal();
+	boolean isIsHorizontal();
 
 	/**
-	 * Sets the value of the '{@link BPMNDI.BPMNShape#getIsHorizontal <em>Is Horizontal</em>}' attribute.
+	 * Sets the value of the '{@link BPMNDI.BPMNShape#isIsHorizontal <em>Is Horizontal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Horizontal</em>' attribute.
-	 * @see #getIsHorizontal()
+	 * @see #isIsHorizontal()
 	 * @generated
 	 */
-	void setIsHorizontal(Object value);
+	void setIsHorizontal(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Expanded</b></em>' attribute.
@@ -95,22 +95,22 @@ public interface BPMNShape extends LabeledShape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Expanded</em>' attribute.
-	 * @see #setIsExpanded(Boolean)
+	 * @see #setIsExpanded(boolean)
 	 * @see BPMNDI.BPMNDIPackage#getBPMNShape_IsExpanded()
-	 * @model dataType="DC.Boolean" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getIsExpanded();
+	boolean isIsExpanded();
 
 	/**
-	 * Sets the value of the '{@link BPMNDI.BPMNShape#getIsExpanded <em>Is Expanded</em>}' attribute.
+	 * Sets the value of the '{@link BPMNDI.BPMNShape#isIsExpanded <em>Is Expanded</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Expanded</em>' attribute.
-	 * @see #getIsExpanded()
+	 * @see #isIsExpanded()
 	 * @generated
 	 */
-	void setIsExpanded(Object value);
+	void setIsExpanded(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Marker Visible</b></em>' attribute.
@@ -121,22 +121,22 @@ public interface BPMNShape extends LabeledShape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Marker Visible</em>' attribute.
-	 * @see #setIsMarkerVisible(Boolean)
+	 * @see #setIsMarkerVisible(boolean)
 	 * @see BPMNDI.BPMNDIPackage#getBPMNShape_IsMarkerVisible()
-	 * @model dataType="DC.Boolean" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getIsMarkerVisible();
+	boolean isIsMarkerVisible();
 
 	/**
-	 * Sets the value of the '{@link BPMNDI.BPMNShape#getIsMarkerVisible <em>Is Marker Visible</em>}' attribute.
+	 * Sets the value of the '{@link BPMNDI.BPMNShape#isIsMarkerVisible <em>Is Marker Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Marker Visible</em>' attribute.
-	 * @see #getIsMarkerVisible()
+	 * @see #isIsMarkerVisible()
 	 * @generated
 	 */
-	void setIsMarkerVisible(Object value);
+	void setIsMarkerVisible(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' containment reference.
@@ -173,22 +173,22 @@ public interface BPMNShape extends LabeledShape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Message Visible</em>' attribute.
-	 * @see #setIsMessageVisible(Boolean)
+	 * @see #setIsMessageVisible(boolean)
 	 * @see BPMNDI.BPMNDIPackage#getBPMNShape_IsMessageVisible()
-	 * @model dataType="DC.Boolean" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getIsMessageVisible();
+	boolean isIsMessageVisible();
 
 	/**
-	 * Sets the value of the '{@link BPMNDI.BPMNShape#getIsMessageVisible <em>Is Message Visible</em>}' attribute.
+	 * Sets the value of the '{@link BPMNDI.BPMNShape#isIsMessageVisible <em>Is Message Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Message Visible</em>' attribute.
-	 * @see #getIsMessageVisible()
+	 * @see #isIsMessageVisible()
 	 * @generated
 	 */
-	void setIsMessageVisible(Object value);
+	void setIsMessageVisible(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Participant Band Kind</b></em>' attribute.

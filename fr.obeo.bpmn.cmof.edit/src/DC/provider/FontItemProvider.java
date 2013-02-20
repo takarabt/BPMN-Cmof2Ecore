@@ -115,7 +115,7 @@ public class FontItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -137,7 +137,7 @@ public class FontItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -159,7 +159,7 @@ public class FontItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -181,7 +181,7 @@ public class FontItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -203,7 +203,7 @@ public class FontItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -227,8 +227,7 @@ public class FontItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((Font)object).getName();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Font)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Font_type") :
 			getString("_UI_Font_type") + " " + label;

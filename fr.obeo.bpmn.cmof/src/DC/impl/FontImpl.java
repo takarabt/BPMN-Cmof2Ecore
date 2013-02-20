@@ -37,10 +37,10 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
  * <ul>
  *   <li>{@link DC.impl.FontImpl#getName <em>Name</em>}</li>
  *   <li>{@link DC.impl.FontImpl#getSize <em>Size</em>}</li>
- *   <li>{@link DC.impl.FontImpl#getIsBold <em>Is Bold</em>}</li>
- *   <li>{@link DC.impl.FontImpl#getIsItalic <em>Is Italic</em>}</li>
- *   <li>{@link DC.impl.FontImpl#getIsUnderline <em>Is Underline</em>}</li>
- *   <li>{@link DC.impl.FontImpl#getIsStrikeThrough <em>Is Strike Through</em>}</li>
+ *   <li>{@link DC.impl.FontImpl#isIsBold <em>Is Bold</em>}</li>
+ *   <li>{@link DC.impl.FontImpl#isIsItalic <em>Is Italic</em>}</li>
+ *   <li>{@link DC.impl.FontImpl#isIsUnderline <em>Is Underline</em>}</li>
+ *   <li>{@link DC.impl.FontImpl#isIsStrikeThrough <em>Is Strike Through</em>}</li>
  * </ul>
  * </p>
  *
@@ -55,7 +55,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -65,7 +65,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object name = NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -75,7 +75,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object SIZE_EDEFAULT = null;
+	protected static final float SIZE_EDEFAULT = 0.0F;
 
 	/**
 	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -85,87 +85,87 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object size = SIZE_EDEFAULT;
+	protected float size = SIZE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIsBold() <em>Is Bold</em>}' attribute.
+	 * The default value of the '{@link #isIsBold() <em>Is Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsBold()
+	 * @see #isIsBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_BOLD_EDEFAULT = null;
+	protected static final boolean IS_BOLD_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsBold() <em>Is Bold</em>}' attribute.
+	 * The cached value of the '{@link #isIsBold() <em>Is Bold</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsBold()
+	 * @see #isIsBold()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isBold = IS_BOLD_EDEFAULT;
+	protected boolean isBold = IS_BOLD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIsItalic() <em>Is Italic</em>}' attribute.
+	 * The default value of the '{@link #isIsItalic() <em>Is Italic</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsItalic()
+	 * @see #isIsItalic()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_ITALIC_EDEFAULT = null;
+	protected static final boolean IS_ITALIC_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsItalic() <em>Is Italic</em>}' attribute.
+	 * The cached value of the '{@link #isIsItalic() <em>Is Italic</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsItalic()
+	 * @see #isIsItalic()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isItalic = IS_ITALIC_EDEFAULT;
+	protected boolean isItalic = IS_ITALIC_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIsUnderline() <em>Is Underline</em>}' attribute.
+	 * The default value of the '{@link #isIsUnderline() <em>Is Underline</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsUnderline()
+	 * @see #isIsUnderline()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_UNDERLINE_EDEFAULT = null;
+	protected static final boolean IS_UNDERLINE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsUnderline() <em>Is Underline</em>}' attribute.
+	 * The cached value of the '{@link #isIsUnderline() <em>Is Underline</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsUnderline()
+	 * @see #isIsUnderline()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isUnderline = IS_UNDERLINE_EDEFAULT;
+	protected boolean isUnderline = IS_UNDERLINE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIsStrikeThrough() <em>Is Strike Through</em>}' attribute.
+	 * The default value of the '{@link #isIsStrikeThrough() <em>Is Strike Through</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsStrikeThrough()
+	 * @see #isIsStrikeThrough()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_STRIKE_THROUGH_EDEFAULT = null;
+	protected static final boolean IS_STRIKE_THROUGH_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsStrikeThrough() <em>Is Strike Through</em>}' attribute.
+	 * The cached value of the '{@link #isIsStrikeThrough() <em>Is Strike Through</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsStrikeThrough()
+	 * @see #isIsStrikeThrough()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isStrikeThrough = IS_STRIKE_THROUGH_EDEFAULT;
+	protected boolean isStrikeThrough = IS_STRIKE_THROUGH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,7 +191,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -200,8 +200,8 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Object newName) {
-		Object oldName = name;
+	public void setName(String newName) {
+		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.FONT__NAME, oldName, name));
@@ -212,7 +212,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getSize() {
+	public float getSize() {
 		return size;
 	}
 
@@ -221,8 +221,8 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSize(Object newSize) {
-		Object oldSize = size;
+	public void setSize(float newSize) {
+		float oldSize = size;
 		size = newSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.FONT__SIZE, oldSize, size));
@@ -233,7 +233,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsBold() {
+	public boolean isIsBold() {
 		return isBold;
 	}
 
@@ -242,8 +242,8 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsBold(Object newIsBold) {
-		Object oldIsBold = isBold;
+	public void setIsBold(boolean newIsBold) {
+		boolean oldIsBold = isBold;
 		isBold = newIsBold;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.FONT__IS_BOLD, oldIsBold, isBold));
@@ -254,7 +254,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsItalic() {
+	public boolean isIsItalic() {
 		return isItalic;
 	}
 
@@ -263,8 +263,8 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsItalic(Object newIsItalic) {
-		Object oldIsItalic = isItalic;
+	public void setIsItalic(boolean newIsItalic) {
+		boolean oldIsItalic = isItalic;
 		isItalic = newIsItalic;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.FONT__IS_ITALIC, oldIsItalic, isItalic));
@@ -275,7 +275,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsUnderline() {
+	public boolean isIsUnderline() {
 		return isUnderline;
 	}
 
@@ -284,8 +284,8 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsUnderline(Object newIsUnderline) {
-		Object oldIsUnderline = isUnderline;
+	public void setIsUnderline(boolean newIsUnderline) {
+		boolean oldIsUnderline = isUnderline;
 		isUnderline = newIsUnderline;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.FONT__IS_UNDERLINE, oldIsUnderline, isUnderline));
@@ -296,7 +296,7 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsStrikeThrough() {
+	public boolean isIsStrikeThrough() {
 		return isStrikeThrough;
 	}
 
@@ -305,8 +305,8 @@ public class FontImpl extends EObjectImpl implements Font {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsStrikeThrough(Object newIsStrikeThrough) {
-		Object oldIsStrikeThrough = isStrikeThrough;
+	public void setIsStrikeThrough(boolean newIsStrikeThrough) {
+		boolean oldIsStrikeThrough = isStrikeThrough;
 		isStrikeThrough = newIsStrikeThrough;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DCPackage.FONT__IS_STRIKE_THROUGH, oldIsStrikeThrough, isStrikeThrough));
@@ -350,13 +350,13 @@ public class FontImpl extends EObjectImpl implements Font {
 			case DCPackage.FONT__SIZE:
 				return getSize();
 			case DCPackage.FONT__IS_BOLD:
-				return getIsBold();
+				return isIsBold();
 			case DCPackage.FONT__IS_ITALIC:
-				return getIsItalic();
+				return isIsItalic();
 			case DCPackage.FONT__IS_UNDERLINE:
-				return getIsUnderline();
+				return isIsUnderline();
 			case DCPackage.FONT__IS_STRIKE_THROUGH:
-				return getIsStrikeThrough();
+				return isIsStrikeThrough();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -370,22 +370,22 @@ public class FontImpl extends EObjectImpl implements Font {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case DCPackage.FONT__NAME:
-				setName((Object)newValue);
+				setName((String)newValue);
 				return;
 			case DCPackage.FONT__SIZE:
-				setSize((Object)newValue);
+				setSize((Float)newValue);
 				return;
 			case DCPackage.FONT__IS_BOLD:
-				setIsBold((Object)newValue);
+				setIsBold((Boolean)newValue);
 				return;
 			case DCPackage.FONT__IS_ITALIC:
-				setIsItalic((Object)newValue);
+				setIsItalic((Boolean)newValue);
 				return;
 			case DCPackage.FONT__IS_UNDERLINE:
-				setIsUnderline((Object)newValue);
+				setIsUnderline((Boolean)newValue);
 				return;
 			case DCPackage.FONT__IS_STRIKE_THROUGH:
-				setIsStrikeThrough((Object)newValue);
+				setIsStrikeThrough((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -432,15 +432,15 @@ public class FontImpl extends EObjectImpl implements Font {
 			case DCPackage.FONT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case DCPackage.FONT__SIZE:
-				return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
+				return size != SIZE_EDEFAULT;
 			case DCPackage.FONT__IS_BOLD:
-				return IS_BOLD_EDEFAULT == null ? isBold != null : !IS_BOLD_EDEFAULT.equals(isBold);
+				return isBold != IS_BOLD_EDEFAULT;
 			case DCPackage.FONT__IS_ITALIC:
-				return IS_ITALIC_EDEFAULT == null ? isItalic != null : !IS_ITALIC_EDEFAULT.equals(isItalic);
+				return isItalic != IS_ITALIC_EDEFAULT;
 			case DCPackage.FONT__IS_UNDERLINE:
-				return IS_UNDERLINE_EDEFAULT == null ? isUnderline != null : !IS_UNDERLINE_EDEFAULT.equals(isUnderline);
+				return isUnderline != IS_UNDERLINE_EDEFAULT;
 			case DCPackage.FONT__IS_STRIKE_THROUGH:
-				return IS_STRIKE_THROUGH_EDEFAULT == null ? isStrikeThrough != null : !IS_STRIKE_THROUGH_EDEFAULT.equals(isStrikeThrough);
+				return isStrikeThrough != IS_STRIKE_THROUGH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

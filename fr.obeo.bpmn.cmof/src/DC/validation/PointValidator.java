@@ -16,6 +16,6 @@ package DC.validation;
 public interface PointValidator {
 	boolean validate();
 
-	boolean validateX(Object value);
-	boolean validateY(Object value);
+	boolean validateX(float value);
+	boolean validateY(float value);
 }

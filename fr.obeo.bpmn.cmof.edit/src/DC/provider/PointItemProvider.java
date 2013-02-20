@@ -89,7 +89,7 @@ public class PointItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -111,7 +111,7 @@ public class PointItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -135,11 +135,8 @@ public class PointItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((Point)object).getX();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Point_type") :
-			getString("_UI_Point_type") + " " + label;
+		Point point = (Point)object;
+		return getString("_UI_Point_type") + " " + point.getX();
 	}
 
 	/**

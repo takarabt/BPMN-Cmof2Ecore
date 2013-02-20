@@ -704,10 +704,6 @@
     </genClasses>
   </genPackages>
   <genPackages prefix="DC" disposableProviderFactory="true" ecorePackage="DC.ecore#/">
-    <genDataTypes ecoreDataType="DC.ecore#//Boolean"/>
-    <genDataTypes ecoreDataType="DC.ecore#//Integer"/>
-    <genDataTypes ecoreDataType="DC.ecore#//Real"/>
-    <genDataTypes ecoreDataType="DC.ecore#//String"/>
     <genClasses ecoreClass="DC.ecore#//Font">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DC.ecore#//Font/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DC.ecore#//Font/size"/>

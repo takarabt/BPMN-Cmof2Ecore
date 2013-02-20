@@ -42,10 +42,10 @@ public interface Diagram extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see DI.DIPackage#getDiagram_Name()
-	 * @model dataType="DC.String" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getName();
+	String getName();
 
 	/**
 	 * Sets the value of the '{@link DI.Diagram#getName <em>Name</em>}' attribute.
@@ -55,7 +55,7 @@ public interface Diagram extends EObject {
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(Object value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Documentation</b></em>' attribute.
@@ -68,10 +68,10 @@ public interface Diagram extends EObject {
 	 * @return the value of the '<em>Documentation</em>' attribute.
 	 * @see #setDocumentation(String)
 	 * @see DI.DIPackage#getDiagram_Documentation()
-	 * @model dataType="DC.String" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getDocumentation();
+	String getDocumentation();
 
 	/**
 	 * Sets the value of the '{@link DI.Diagram#getDocumentation <em>Documentation</em>}' attribute.
@@ -81,7 +81,7 @@ public interface Diagram extends EObject {
 	 * @see #getDocumentation()
 	 * @generated
 	 */
-	void setDocumentation(Object value);
+	void setDocumentation(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Resolution</b></em>' attribute.
@@ -92,12 +92,12 @@ public interface Diagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resolution</em>' attribute.
-	 * @see #setResolution(Real)
+	 * @see #setResolution(float)
 	 * @see DI.DIPackage#getDiagram_Resolution()
-	 * @model dataType="DC.Real" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	Object getResolution();
+	float getResolution();
 
 	/**
 	 * Sets the value of the '{@link DI.Diagram#getResolution <em>Resolution</em>}' attribute.
@@ -107,7 +107,7 @@ public interface Diagram extends EObject {
 	 * @see #getResolution()
 	 * @generated
 	 */
-	void setResolution(Object value);
+	void setResolution(float value);
 
 	/**
 	 * Returns the value of the '<em><b>Owned Style</b></em>' reference list.

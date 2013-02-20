@@ -91,7 +91,7 @@ public class BoundsItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -113,7 +113,7 @@ public class BoundsItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -135,7 +135,7 @@ public class BoundsItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -157,7 +157,7 @@ public class BoundsItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -181,11 +181,8 @@ public class BoundsItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((Bounds)object).getX();
-		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Bounds_type") :
-			getString("_UI_Bounds_type") + " " + label;
+		Bounds bounds = (Bounds)object;
+		return getString("_UI_Bounds_type") + " " + bounds.getX();
 	}
 
 	/**

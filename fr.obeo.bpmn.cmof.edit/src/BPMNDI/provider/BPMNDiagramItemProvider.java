@@ -122,8 +122,7 @@ public class BPMNDiagramItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((BPMNDiagram)object).getName();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((BPMNDiagram)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_BPMNDiagram_type") :
 			getString("_UI_BPMNDiagram_type") + " " + label;

@@ -103,14 +103,6 @@ public class DCValidator extends EObjectValidator {
 				return validatePoint((Point)value, diagnostics, context);
 			case DCPackage.BOUNDS:
 				return validateBounds((Bounds)value, diagnostics, context);
-			case DCPackage.BOOLEAN:
-				return validateBoolean((Object)value, diagnostics, context);
-			case DCPackage.INTEGER:
-				return validateInteger((Object)value, diagnostics, context);
-			case DCPackage.REAL:
-				return validateReal((Object)value, diagnostics, context);
-			case DCPackage.STRING:
-				return validateString((Object)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -161,42 +153,6 @@ public class DCValidator extends EObjectValidator {
 	 */
 	public boolean validateBounds(Bounds bounds, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(bounds, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateBoolean(Object boolean_, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateInteger(Object integer, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateReal(Object real, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateString(Object string, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
 	}
 
 	/**

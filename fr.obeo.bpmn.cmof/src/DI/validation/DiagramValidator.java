@@ -20,9 +20,9 @@ import org.eclipse.emf.common.util.EList;
 public interface DiagramValidator {
 	boolean validate();
 
-	boolean validateName(Object value);
-	boolean validateDocumentation(Object value);
-	boolean validateResolution(Object value);
+	boolean validateName(String value);
+	boolean validateDocumentation(String value);
+	boolean validateResolution(float value);
 	boolean validateOwnedStyle(EList<Style> value);
 	boolean validateRootElement(DiagramElement value);
 }

@@ -31,11 +31,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getBpmnElement <em>Bpmn Element</em>}</li>
- *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getIsHorizontal <em>Is Horizontal</em>}</li>
- *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getIsExpanded <em>Is Expanded</em>}</li>
- *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getIsMarkerVisible <em>Is Marker Visible</em>}</li>
+ *   <li>{@link BPMNDI.impl.BPMNShapeImpl#isIsHorizontal <em>Is Horizontal</em>}</li>
+ *   <li>{@link BPMNDI.impl.BPMNShapeImpl#isIsExpanded <em>Is Expanded</em>}</li>
+ *   <li>{@link BPMNDI.impl.BPMNShapeImpl#isIsMarkerVisible <em>Is Marker Visible</em>}</li>
  *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getIsMessageVisible <em>Is Message Visible</em>}</li>
+ *   <li>{@link BPMNDI.impl.BPMNShapeImpl#isIsMessageVisible <em>Is Message Visible</em>}</li>
  *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getParticipantBandKind <em>Participant Band Kind</em>}</li>
  *   <li>{@link BPMNDI.impl.BPMNShapeImpl#getChoreographyActivityShape <em>Choreography Activity Shape</em>}</li>
  * </ul>
@@ -55,64 +55,64 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	protected BaseElement bpmnElement;
 
 	/**
-	 * The default value of the '{@link #getIsHorizontal() <em>Is Horizontal</em>}' attribute.
+	 * The default value of the '{@link #isIsHorizontal() <em>Is Horizontal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsHorizontal()
+	 * @see #isIsHorizontal()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_HORIZONTAL_EDEFAULT = null;
+	protected static final boolean IS_HORIZONTAL_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsHorizontal() <em>Is Horizontal</em>}' attribute.
+	 * The cached value of the '{@link #isIsHorizontal() <em>Is Horizontal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsHorizontal()
+	 * @see #isIsHorizontal()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isHorizontal = IS_HORIZONTAL_EDEFAULT;
+	protected boolean isHorizontal = IS_HORIZONTAL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIsExpanded() <em>Is Expanded</em>}' attribute.
+	 * The default value of the '{@link #isIsExpanded() <em>Is Expanded</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsExpanded()
+	 * @see #isIsExpanded()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_EXPANDED_EDEFAULT = null;
+	protected static final boolean IS_EXPANDED_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsExpanded() <em>Is Expanded</em>}' attribute.
+	 * The cached value of the '{@link #isIsExpanded() <em>Is Expanded</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsExpanded()
+	 * @see #isIsExpanded()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isExpanded = IS_EXPANDED_EDEFAULT;
+	protected boolean isExpanded = IS_EXPANDED_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIsMarkerVisible() <em>Is Marker Visible</em>}' attribute.
+	 * The default value of the '{@link #isIsMarkerVisible() <em>Is Marker Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsMarkerVisible()
+	 * @see #isIsMarkerVisible()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_MARKER_VISIBLE_EDEFAULT = null;
+	protected static final boolean IS_MARKER_VISIBLE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsMarkerVisible() <em>Is Marker Visible</em>}' attribute.
+	 * The cached value of the '{@link #isIsMarkerVisible() <em>Is Marker Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsMarkerVisible()
+	 * @see #isIsMarkerVisible()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isMarkerVisible = IS_MARKER_VISIBLE_EDEFAULT;
+	protected boolean isMarkerVisible = IS_MARKER_VISIBLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
@@ -125,24 +125,24 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	protected BPMNLabel label;
 
 	/**
-	 * The default value of the '{@link #getIsMessageVisible() <em>Is Message Visible</em>}' attribute.
+	 * The default value of the '{@link #isIsMessageVisible() <em>Is Message Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsMessageVisible()
+	 * @see #isIsMessageVisible()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object IS_MESSAGE_VISIBLE_EDEFAULT = null;
+	protected static final boolean IS_MESSAGE_VISIBLE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsMessageVisible() <em>Is Message Visible</em>}' attribute.
+	 * The cached value of the '{@link #isIsMessageVisible() <em>Is Message Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsMessageVisible()
+	 * @see #isIsMessageVisible()
 	 * @generated
 	 * @ordered
 	 */
-	protected Object isMessageVisible = IS_MESSAGE_VISIBLE_EDEFAULT;
+	protected boolean isMessageVisible = IS_MESSAGE_VISIBLE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getParticipantBandKind() <em>Participant Band Kind</em>}' attribute.
@@ -236,7 +236,7 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsHorizontal() {
+	public boolean isIsHorizontal() {
 		return isHorizontal;
 	}
 
@@ -245,8 +245,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsHorizontal(Object newIsHorizontal) {
-		Object oldIsHorizontal = isHorizontal;
+	public void setIsHorizontal(boolean newIsHorizontal) {
+		boolean oldIsHorizontal = isHorizontal;
 		isHorizontal = newIsHorizontal;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BPMNDIPackage.BPMN_SHAPE__IS_HORIZONTAL, oldIsHorizontal, isHorizontal));
@@ -257,7 +257,7 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsExpanded() {
+	public boolean isIsExpanded() {
 		return isExpanded;
 	}
 
@@ -266,8 +266,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsExpanded(Object newIsExpanded) {
-		Object oldIsExpanded = isExpanded;
+	public void setIsExpanded(boolean newIsExpanded) {
+		boolean oldIsExpanded = isExpanded;
 		isExpanded = newIsExpanded;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BPMNDIPackage.BPMN_SHAPE__IS_EXPANDED, oldIsExpanded, isExpanded));
@@ -278,7 +278,7 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsMarkerVisible() {
+	public boolean isIsMarkerVisible() {
 		return isMarkerVisible;
 	}
 
@@ -287,8 +287,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsMarkerVisible(Object newIsMarkerVisible) {
-		Object oldIsMarkerVisible = isMarkerVisible;
+	public void setIsMarkerVisible(boolean newIsMarkerVisible) {
+		boolean oldIsMarkerVisible = isMarkerVisible;
 		isMarkerVisible = newIsMarkerVisible;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BPMNDIPackage.BPMN_SHAPE__IS_MARKER_VISIBLE, oldIsMarkerVisible, isMarkerVisible));
@@ -342,7 +342,7 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getIsMessageVisible() {
+	public boolean isIsMessageVisible() {
 		return isMessageVisible;
 	}
 
@@ -351,8 +351,8 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsMessageVisible(Object newIsMessageVisible) {
-		Object oldIsMessageVisible = isMessageVisible;
+	public void setIsMessageVisible(boolean newIsMessageVisible) {
+		boolean oldIsMessageVisible = isMessageVisible;
 		isMessageVisible = newIsMessageVisible;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BPMNDIPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE, oldIsMessageVisible, isMessageVisible));
@@ -443,15 +443,15 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 				if (resolve) return getBpmnElement();
 				return basicGetBpmnElement();
 			case BPMNDIPackage.BPMN_SHAPE__IS_HORIZONTAL:
-				return getIsHorizontal();
+				return isIsHorizontal();
 			case BPMNDIPackage.BPMN_SHAPE__IS_EXPANDED:
-				return getIsExpanded();
+				return isIsExpanded();
 			case BPMNDIPackage.BPMN_SHAPE__IS_MARKER_VISIBLE:
-				return getIsMarkerVisible();
+				return isIsMarkerVisible();
 			case BPMNDIPackage.BPMN_SHAPE__LABEL:
 				return getLabel();
 			case BPMNDIPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE:
-				return getIsMessageVisible();
+				return isIsMessageVisible();
 			case BPMNDIPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND:
 				return getParticipantBandKind();
 			case BPMNDIPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE:
@@ -473,19 +473,19 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 				setBpmnElement((BaseElement)newValue);
 				return;
 			case BPMNDIPackage.BPMN_SHAPE__IS_HORIZONTAL:
-				setIsHorizontal((Object)newValue);
+				setIsHorizontal((Boolean)newValue);
 				return;
 			case BPMNDIPackage.BPMN_SHAPE__IS_EXPANDED:
-				setIsExpanded((Object)newValue);
+				setIsExpanded((Boolean)newValue);
 				return;
 			case BPMNDIPackage.BPMN_SHAPE__IS_MARKER_VISIBLE:
-				setIsMarkerVisible((Object)newValue);
+				setIsMarkerVisible((Boolean)newValue);
 				return;
 			case BPMNDIPackage.BPMN_SHAPE__LABEL:
 				setLabel((BPMNLabel)newValue);
 				return;
 			case BPMNDIPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE:
-				setIsMessageVisible((Object)newValue);
+				setIsMessageVisible((Boolean)newValue);
 				return;
 			case BPMNDIPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND:
 				setParticipantBandKind((ParticipantBandKind)newValue);
@@ -544,15 +544,15 @@ public class BPMNShapeImpl extends LabeledShapeImpl implements BPMNShape {
 			case BPMNDIPackage.BPMN_SHAPE__BPMN_ELEMENT:
 				return bpmnElement != null;
 			case BPMNDIPackage.BPMN_SHAPE__IS_HORIZONTAL:
-				return IS_HORIZONTAL_EDEFAULT == null ? isHorizontal != null : !IS_HORIZONTAL_EDEFAULT.equals(isHorizontal);
+				return isHorizontal != IS_HORIZONTAL_EDEFAULT;
 			case BPMNDIPackage.BPMN_SHAPE__IS_EXPANDED:
-				return IS_EXPANDED_EDEFAULT == null ? isExpanded != null : !IS_EXPANDED_EDEFAULT.equals(isExpanded);
+				return isExpanded != IS_EXPANDED_EDEFAULT;
 			case BPMNDIPackage.BPMN_SHAPE__IS_MARKER_VISIBLE:
-				return IS_MARKER_VISIBLE_EDEFAULT == null ? isMarkerVisible != null : !IS_MARKER_VISIBLE_EDEFAULT.equals(isMarkerVisible);
+				return isMarkerVisible != IS_MARKER_VISIBLE_EDEFAULT;
 			case BPMNDIPackage.BPMN_SHAPE__LABEL:
 				return label != null;
 			case BPMNDIPackage.BPMN_SHAPE__IS_MESSAGE_VISIBLE:
-				return IS_MESSAGE_VISIBLE_EDEFAULT == null ? isMessageVisible != null : !IS_MESSAGE_VISIBLE_EDEFAULT.equals(isMessageVisible);
+				return isMessageVisible != IS_MESSAGE_VISIBLE_EDEFAULT;
 			case BPMNDIPackage.BPMN_SHAPE__PARTICIPANT_BAND_KIND:
 				return participantBandKind != PARTICIPANT_BAND_KIND_EDEFAULT;
 			case BPMNDIPackage.BPMN_SHAPE__CHOREOGRAPHY_ACTIVITY_SHAPE:

@@ -19,11 +19,11 @@
         eType="#//Style" changeable="false" volatile="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType DC.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" ordered="false"
-        eType="ecore:EDataType DC.ecore#//String"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resolution" ordered="false"
-        eType="ecore:EDataType DC.ecore#//Real"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedStyle" ordered="false"
         upperBound="-1" eType="#//Style" changeable="false" volatile="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rootElement" ordered="false"

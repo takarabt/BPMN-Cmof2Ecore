@@ -16,8 +16,8 @@ package DC.validation;
 public interface BoundsValidator {
 	boolean validate();
 
-	boolean validateX(Object value);
-	boolean validateY(Object value);
-	boolean validateWidth(Object value);
-	boolean validateHeight(Object value);
+	boolean validateX(float value);
+	boolean validateY(float value);
+	boolean validateWidth(float value);
+	boolean validateHeight(float value);
 }
