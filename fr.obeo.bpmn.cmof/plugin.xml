@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+            class="BPMN20.BPMN20Package"
+            genModel="model/BPMN20.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+            class="BPMNDI.BPMNDIPackage"
+            genModel="model/BPMN20.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/DD/20100524/DI-XMI"
+            class="DI.DIPackage"
+            genModel="model/BPMN20.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.omg.org/spec/DD/20100524/DC-XMI"
+            class="DC.DCPackage"
+            genModel="model/BPMN20.genmodel"/>
+   </extension>
+
+</plugin>

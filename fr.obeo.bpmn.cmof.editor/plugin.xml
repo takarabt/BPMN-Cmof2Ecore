@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="BPMN20.presentation.BPMN20ModelWizardID"
+            name="%_UI_BPMN20ModelWizard_label"
+            class="BPMN20.presentation.BPMN20ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BPMN20ModelFile.gif">
+         <description>%_UI_BPMN20ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="BPMN20.presentation.BPMN20EditorID"
+            name="%_UI_BPMN20Editor_label"
+            icon="icons/full/obj16/BPMN20ModelFile.gif"
+            extensions="bpmn20"
+            class="BPMN20.presentation.BPMN20Editor"
+            contributorClass="BPMN20.presentation.BPMN20ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="BPMNDI.presentation.BPMNDIModelWizardID"
+            name="%_UI_BPMNDIModelWizard_label"
+            class="BPMNDI.presentation.BPMNDIModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BPMNDIModelFile.gif">
+         <description>%_UI_BPMNDIModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="BPMNDI.presentation.BPMNDIEditorID"
+            name="%_UI_BPMNDIEditor_label"
+            icon="icons/full/obj16/BPMNDIModelFile.gif"
+            extensions="bpmndi"
+            class="BPMNDI.presentation.BPMNDIEditor"
+            contributorClass="BPMNDI.presentation.BPMNDIActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="DC.presentation.DCModelWizardID"
+            name="%_UI_DCModelWizard_label"
+            class="DC.presentation.DCModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DCModelFile.gif">
+         <description>%_UI_DCModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="DC.presentation.DCEditorID"
+            name="%_UI_DCEditor_label"
+            icon="icons/full/obj16/DCModelFile.gif"
+            extensions="dc"
+            class="DC.presentation.DCEditor"
+            contributorClass="DC.presentation.DCActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
