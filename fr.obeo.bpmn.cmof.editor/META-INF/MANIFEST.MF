@@ -4,13 +4,13 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.obeo.bpmn.cmof.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: BPMN20.presentation.BPMN20EditorPlugin$Implementation
+Bundle-Activator: bpmn2.presentation.BPMN20EditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: BPMN20.presentation,
- BPMNDI.presentation,
- DC.presentation
+Export-Package: bpmdi.presentation,
+ bpmn2.presentation,
+ dc.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  fr.obeo.bpmn.cmof.edit;visibility:=reexport,

@@ -15,24 +15,24 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="BPMN20.presentation.BPMN20ModelWizardID"
-            name="%_UI_BPMN20ModelWizard_label"
-            class="BPMN20.presentation.BPMN20ModelWizard"
+            id="bpmn2.presentation.Bpmn2ModelWizardID"
+            name="%_UI_Bpmn2ModelWizard_label"
+            class="bpmn2.presentation.Bpmn2ModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/BPMN20ModelFile.gif">
-         <description>%_UI_BPMN20ModelWizard_description</description>
+            icon="icons/full/obj16/Bpmn2ModelFile.gif">
+         <description>%_UI_Bpmn2ModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="BPMN20.presentation.BPMN20EditorID"
-            name="%_UI_BPMN20Editor_label"
-            icon="icons/full/obj16/BPMN20ModelFile.gif"
-            extensions="bpmn20"
-            class="BPMN20.presentation.BPMN20Editor"
-            contributorClass="BPMN20.presentation.BPMN20ActionBarContributor">
+            id="bpmn2.presentation.Bpmn2EditorID"
+            name="%_UI_Bpmn2Editor_label"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            extensions="bpmn2"
+            class="bpmn2.presentation.Bpmn2Editor"
+            contributorClass="bpmn2.presentation.Bpmn2ActionBarContributor">
       </editor>
    </extension>
 
@@ -41,24 +41,24 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="BPMNDI.presentation.BPMNDIModelWizardID"
-            name="%_UI_BPMNDIModelWizard_label"
-            class="BPMNDI.presentation.BPMNDIModelWizard"
+            id="bpmdi.presentation.BpmdiModelWizardID"
+            name="%_UI_BpmdiModelWizard_label"
+            class="bpmdi.presentation.BpmdiModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/BPMNDIModelFile.gif">
-         <description>%_UI_BPMNDIModelWizard_description</description>
+            icon="icons/full/obj16/BpmdiModelFile.gif">
+         <description>%_UI_BpmdiModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="BPMNDI.presentation.BPMNDIEditorID"
-            name="%_UI_BPMNDIEditor_label"
-            icon="icons/full/obj16/BPMNDIModelFile.gif"
-            extensions="bpmndi"
-            class="BPMNDI.presentation.BPMNDIEditor"
-            contributorClass="BPMNDI.presentation.BPMNDIActionBarContributor">
+            id="bpmdi.presentation.BpmdiEditorID"
+            name="%_UI_BpmdiEditor_label"
+            icon="icons/full/obj16/BpmdiModelFile.gif"
+            extensions="bpmdi"
+            class="bpmdi.presentation.BpmdiEditor"
+            contributorClass="bpmdi.presentation.BpmdiActionBarContributor">
       </editor>
    </extension>
 
@@ -67,24 +67,24 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="DC.presentation.DCModelWizardID"
-            name="%_UI_DCModelWizard_label"
-            class="DC.presentation.DCModelWizard"
+            id="dc.presentation.DcModelWizardID"
+            name="%_UI_DcModelWizard_label"
+            class="dc.presentation.DcModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/DCModelFile.gif">
-         <description>%_UI_DCModelWizard_description</description>
+            icon="icons/full/obj16/DcModelFile.gif">
+         <description>%_UI_DcModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="DC.presentation.DCEditorID"
-            name="%_UI_DCEditor_label"
-            icon="icons/full/obj16/DCModelFile.gif"
+            id="dc.presentation.DcEditorID"
+            name="%_UI_DcEditor_label"
+            icon="icons/full/obj16/DcModelFile.gif"
             extensions="dc"
-            class="DC.presentation.DCEditor"
-            contributorClass="DC.presentation.DCActionBarContributor">
+            class="dc.presentation.DcEditor"
+            contributorClass="dc.presentation.DcActionBarContributor">
       </editor>
    </extension>
 

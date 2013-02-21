@@ -6,33 +6,33 @@ code generator can be extended.
 This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator=false.
 
 Contains packages:
-  BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
-  BPMNDI <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
-  DI <http://www.omg.org/spec/DD/20100524/DI-XMI>
-  DC <http://www.omg.org/spec/DD/20100524/DC-XMI>
+  bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
+  bpmdi <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
+  di <http://www.omg.org/spec/DD/20100524/DI-XMI>
+  dc <http://www.omg.org/spec/DD/20100524/DC-XMI>
 
-Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
+Package bpmn2 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Interface -> RootElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference operations : Operation<<1..*>>
     Reference implementationRef : EObject
 
   Class RootElement -> BaseElement
 
   Class BaseElement
-    Attribute id : EJavaObject<<1..1>>
+    Attribute id : EString<<1..1>>
     Reference extensionDefinitions : ExtensionDefinition<<0..*>>
     Reference extensionValues : ExtensionAttributeValue<<0..*>>
     Reference documentation : Documentation<<0..*>>
 
   Class ExtensionDefinition
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference extensionAttributeDefinitions : ExtensionAttributeDefinition<<0..*>>
 
   Class ExtensionAttributeDefinition
-    Attribute name : EJavaObject<<1..1>>
-    Attribute type : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute type : EString<<1..1>>
     Attribute isReference : EBoolean<<1..1>>
     Reference extensionDefinition : ExtensionDefinition<<1..1>>
 
@@ -42,18 +42,18 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference extensionAttributeDefinition : ExtensionAttributeDefinition<<1..1>>
 
   Class Documentation -> BaseElement
-    Attribute text : EJavaObject<<1..1>>
+    Attribute text : EString<<1..1>>
     Attribute textFormat : EString<<1..1>>
 
   Class Operation -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference inMessageRef : Message<<1..1>>
     Reference outMessageRef : Message
     Reference errorRefs : Error<<0..*>>
     Reference implementationRef : EObject
 
   Class Message -> RootElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference itemRef : ItemDefinition
 
   Class ItemDefinition -> RootElement
@@ -63,14 +63,14 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference import : Import
 
   Class Import
-    Attribute importType : EJavaObject<<1..1>>
-    Attribute location : EJavaObject<<1..1>>
-    Attribute namespace : EJavaObject<<1..1>>
+    Attribute importType : EString<<1..1>>
+    Attribute location : EString<<1..1>>
+    Attribute namespace : EString<<1..1>>
 
   Class Error -> RootElement
     Reference structureRef : ItemDefinition
-    Attribute name : EJavaObject<<1..1>>
-    Attribute errorCode : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute errorCode : EString<<1..1>>
 
   Class EndPoint -> RootElement
 
@@ -80,7 +80,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference resources : ResourceRole<<0..*>>
 
   Class CallableElement -> RootElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference ioSpecification : InputOutputSpecification
     Reference supportedInterfaceRefs : Interface<<0..*>>
     Reference ioBinding : InputOutputBinding<<0..*>>
@@ -92,14 +92,14 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference dataOutputs : DataOutput<<0..*>>
 
   Class InputSet -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference /dataInputRefs : DataInput<<0..*>>
     Reference /optionalInputRefs : DataInput<<0..*>>
     Reference /whileExecutingInputRefs : DataInput<<0..*>>
     Reference outputSetRefs : OutputSet<<0..*>>
 
   Class DataInput -> ItemAwareElement
-    Attribute name : EJavaObject
+    Attribute name : EString
     Attribute isCollection : EBoolean<<1..1>>
     Reference /inputSetWithOptional : InputSet<<0..*>>
     Reference /inputSetWithWhileExecuting : InputSet<<0..*>>
@@ -110,17 +110,17 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference dataState : DataState
 
   Class DataState -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
 
   Class OutputSet -> BaseElement
     Reference /dataOutputRefs : DataOutput<<0..*>>
     Reference /optionalOutputRefs : DataOutput<<0..*>>
     Reference /whileExecutingOutputRefs : DataOutput<<0..*>>
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference inputSetRefs : InputSet<<0..*>>
 
   Class DataOutput -> ItemAwareElement
-    Attribute name : EJavaObject
+    Attribute name : EString
     Attribute isCollection : EBoolean<<1..1>>
     Reference /outputSetWithOptional : OutputSet<<0..*>>
     Reference /outputSetWithWhileExecuting : OutputSet<<0..*>>
@@ -135,15 +135,15 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference resourceRef : Resource
     Reference resourceParameterBindings : ResourceParameterBinding<<0..*>>
     Reference resourceAssignmentExpression : ResourceAssignmentExpression
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
 
   Class Resource -> RootElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference resourceParameters : ResourceParameter<<0..*>>
 
   Class ResourceParameter -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
-    Attribute isRequired : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute isRequired : EBoolean<<1..1>>
     Reference type : ItemDefinition
 
   Class ResourceParameterBinding
@@ -161,13 +161,13 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Process -> CallableElement, FlowElementsContainer
     Attribute processType : ProcessType<<1..1>>
-    Attribute isClosed : EJavaObject<<1..1>>
+    Attribute isClosed : EBoolean<<1..1>>
     Reference auditing : Auditing
     Reference monitoring : Monitoring
     Reference properties : Property<<0..*>>
     Reference supports : Process<<0..*>>
     Reference definitionalCollaborationRef : Collaboration
-    Attribute isExecutable : EJavaObject<<1..1>>
+    Attribute isExecutable : EBoolean<<1..1>>
     Reference resources : ResourceRole<<0..*>>
     Reference artifacts : Artifact<<0..*>>
     Reference correlationSubscriptions : CorrelationSubscription<<0..*>>
@@ -177,21 +177,21 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference laneSets : LaneSet<<0..*>>
 
   Class FlowElement -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference auditing : Auditing
     Reference monitoring : Monitoring
     Reference /categoryValueRef : CategoryValue<<0..*>>
 
   Class CategoryValue -> BaseElement
-    Attribute value : EJavaObject<<1..1>>
+    Attribute value : EString<<1..1>>
     Reference /categorizedFlowElements : FlowElement<<0..*>>
 
   Class LaneSet -> BaseElement
     Reference lanes : Lane<<0..*>>
-    Attribute name : EJavaObject
+    Attribute name : EString
 
   Class Lane -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference childLaneSet : LaneSet
     Reference partitionElementRef : BaseElement
     Reference /flowNodeRefs : FlowNode<<0..*>>
@@ -203,17 +203,17 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference /lanes : Lane<<0..*>>
 
   Class SequenceFlow -> FlowElement
-    Attribute isImmediate : EJavaObject
+    Attribute isImmediate : EBoolean
     Reference conditionExpression : Expression
     Reference targetRef : FlowNode<<1..1>>
     Reference sourceRef : FlowNode<<1..1>>
 
   Class Property -> ItemAwareElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
 
   Class Collaboration -> RootElement
-    Attribute name : EJavaObject<<1..1>>
-    Attribute isClosed : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute isClosed : EBoolean<<1..1>>
     Reference choreographyRef : Choreography<<0..*>>
     Reference artifacts : Artifact<<0..*>>
     Reference participantAssociations : ParticipantAssociation<<0..*>>
@@ -234,7 +234,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference outerParticipantRef : Participant<<1..1>>
 
   Class Participant -> BaseElement, InteractionNode
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference interfaceRefs : Interface<<0..*>>
     Reference participantMultiplicity : ParticipantMultiplicity
     Reference endPointRefs : EndPoint<<0..*>>
@@ -246,7 +246,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class ConversationLink -> BaseElement
     Reference /sourceRef : InteractionNode<<1..1>>
-    Attribute name : EJavaObject
+    Attribute name : EString
     Reference /targetRef : InteractionNode<<1..1>>
 
   Class ParticipantMultiplicity
@@ -258,7 +258,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference outerMessageFlowRef : MessageFlow<<1..1>>
 
   Class MessageFlow -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference sourceRef : InteractionNode<<1..1>>
     Reference targetRef : InteractionNode<<1..1>>
     Reference messageRef : Message
@@ -268,18 +268,18 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference outerConversationNodeRef : ConversationNode<<1..1>>
 
   Class ConversationNode -> BaseElement, InteractionNode
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference participantRefs : Participant<<2..*>>
     Reference messageFlowRefs : MessageFlow<<0..*>>
     Reference correlationKeys : CorrelationKey<<0..*>>
 
   Class CorrelationKey -> BaseElement
     Reference correlationPropertyRef : CorrelationProperty<<0..*>>
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
 
   Class CorrelationProperty -> RootElement
     Reference correlationPropertyRetrievalExpression : CorrelationPropertyRetrievalExpression<<1..*>>
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference type : ItemDefinition
 
   Class CorrelationPropertyRetrievalExpression -> BaseElement
@@ -287,7 +287,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference messageRef : Message<<1..1>>
 
   Class FormalExpression -> Expression
-    Attribute language : EJavaObject<<1..1>>
+    Attribute language : EString<<1..1>>
     Reference body : EObject<<1..1>>
     Reference evaluatesToTypeRef : ItemDefinition<<1..1>>
 
@@ -325,7 +325,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference attachedToRef : Activity<<1..1>>
 
   Class CatchEvent -> Event
-    Attribute parallelMultiple : EJavaObject<<1..1>>
+    Attribute parallelMultiple : EBoolean<<1..1>>
     Reference outputSet : OutputSet
     Reference eventDefinitionRefs : EventDefinition<<0..*>>
     Reference dataOutputAssociation : DataOutputAssociation<<0..*>>
@@ -353,7 +353,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class UserTask -> Task
     Reference renderings : Rendering<<0..*>>
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
 
   Class Rendering -> BaseElement
 
@@ -362,7 +362,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
   Class PotentialOwner -> HumanPerformer
 
   Class GlobalUserTask -> GlobalTask
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
     Reference renderings : Rendering<<0..*>>
 
   Class Gateway -> FlowNode
@@ -385,7 +385,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
   Class ParallelGateway -> Gateway
 
   Class Relationship -> BaseElement
-    Attribute type : EJavaObject<<1..1>>
+    Attribute type : EString<<1..1>>
     Attribute direction : RelationshipDirection<<1..1>>
     Reference sources : EObject<<1..*>>
     Reference targets : EObject<<1..*>>
@@ -422,11 +422,11 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Escalation
     Reference structureRef : ItemDefinition
-    Attribute name : EJavaObject<<1..1>>
-    Attribute escalationCode : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute escalationCode : EString<<1..1>>
 
   Class CompensateEventDefinition -> EventDefinition
-    Attribute waitForCompletion : EJavaObject<<1..1>>
+    Attribute waitForCompletion : EBoolean<<1..1>>
     Reference activityRef : Activity
 
   Class TimerEventDefinition -> EventDefinition
@@ -435,7 +435,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference timeDuration : Expression
 
   Class LinkEventDefinition -> EventDefinition
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference target : LinkEventDefinition
     Reference source : LinkEventDefinition<<0..*>>
 
@@ -451,7 +451,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Signal -> RootElement
     Reference structureRef : ItemDefinition
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
 
   Class ImplicitThrowEvent -> ThrowEvent
 
@@ -459,8 +459,8 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute isCollection : EBoolean<<1..1>>
 
   Class DataStore -> ItemAwareElement, RootElement
-    Attribute name : EJavaObject<<1..1>>
-    Attribute capacity : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute capacity : EInt<<1..1>>
     Attribute isUnlimited : EBoolean<<1..1>>
 
   Class DataStoreReference -> FlowElement, ItemAwareElement
@@ -481,11 +481,11 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
   Class GlobalConversation -> Collaboration
 
   Class PartnerEntity -> RootElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference participantRef : Participant<<0..*>>
 
   Class PartnerRole -> RootElement
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
     Reference participantRef : Participant<<0..*>>
 
   Class ChoreographyActivity -> FlowNode
@@ -508,7 +508,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference initiatingParticipantRef : Participant<<1..1>>
 
   Class TextAnnotation -> Artifact
-    Attribute text : EJavaObject<<1..1>>
+    Attribute text : EString<<1..1>>
     Attribute textFormat : EString<<1..1>>
 
   Class Group -> Artifact
@@ -521,10 +521,10 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
 
   Class Category -> RootElement
     Reference categoryValue : CategoryValue<<0..*>>
-    Attribute name : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
 
   Class ServiceTask -> Task
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
     Reference operationRef : Operation
 
   Class SubProcess -> Activity, FlowElementsContainer
@@ -557,22 +557,22 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference calledElementRef : CallableElement
 
   Class SendTask -> Task
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
     Reference operationRef : Operation
     Reference messageRef : Message
 
   Class ReceiveTask -> Task
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
     Attribute instantiate : EBoolean<<1..1>>
     Reference operationRef : Operation
     Reference messageRef : Message
 
   Class ScriptTask -> Task
-    Attribute scriptFormat : EJavaObject<<1..1>>
-    Attribute script : EJavaObject<<1..1>>
+    Attribute scriptFormat : EString<<1..1>>
+    Attribute script : EString<<1..1>>
 
   Class BusinessRuleTask -> Task
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
 
   Class AdHocSubProcess -> SubProcess
     Reference completionCondition : Expression<<1..1>>
@@ -580,19 +580,19 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Attribute cancelRemainingInstances : EBoolean<<1..1>>
 
   Class Transaction -> SubProcess
-    Attribute protocol : EJavaObject
-    Attribute method : EJavaObject<<1..1>>
+    Attribute protocol : EString
+    Attribute method : EString<<1..1>>
 
   Class GlobalScriptTask -> GlobalTask
-    Attribute scriptLanguage : EJavaObject<<1..1>>
-    Attribute script : EJavaObject<<1..1>>
+    Attribute scriptLanguage : EString<<1..1>>
+    Attribute script : EString<<1..1>>
 
   Class GlobalBusinessRuleTask -> GlobalTask
-    Attribute implementation : EJavaObject<<1..1>>
+    Attribute implementation : EString<<1..1>>
 
   Class Definitions -> BaseElement
-    Attribute name : EJavaObject<<1..1>>
-    Attribute targetNamespace : EJavaObject<<1..1>>
+    Attribute name : EString<<1..1>>
+    Attribute targetNamespace : EString<<1..1>>
     Attribute expressionLanguage : EString<<1..1>>
     Attribute typeLanguage : EString<<1..1>>
     Reference imports : Import<<0..*>>
@@ -600,8 +600,8 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Reference relationships : Relationship<<0..*>>
     Reference rootElements : RootElement<<0..*>>
     Reference diagrams : BPMNDiagram<<0..*>>
-    Attribute exporter : EJavaObject<<1..1>>
-    Attribute exporterVersion : EJavaObject<<1..1>>
+    Attribute exporter : EString<<1..1>>
+    Attribute exporterVersion : EString<<1..1>>
 
   Enum ItemKind
     Literal Physical = 0
@@ -649,7 +649,7 @@ Package BPMN20 <http://www.omg.org/spec/BPMN/20100524/MODEL-XMI>
     Literal Parallel = 0
     Literal Sequential = 1
 
-Package BPMNDI <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
+Package bpmdi <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
 
   Class BPMNPlane -> Plane
     Reference bpmnElement : BaseElement
@@ -693,7 +693,7 @@ Package BPMNDI <http://www.omg.org/spec/BPMN/20100524/DI-XMI>
     Literal initiating = 0
     Literal non_initiating = 1
 
-Package DI <http://www.omg.org/spec/DD/20100524/DI-XMI>
+Package di <http://www.omg.org/spec/DD/20100524/DI-XMI>
 
   Class DiagramElement
     Reference /owningDiagram : Diagram
@@ -734,7 +734,7 @@ Package DI <http://www.omg.org/spec/DD/20100524/DI-XMI>
     Reference planeElement : DiagramElement<<0..*>>
     Operation plane_element_type(EDiagnosticChain, EMap) : EBoolean
 
-Package DC <http://www.omg.org/spec/DD/20100524/DC-XMI>
+Package dc <http://www.omg.org/spec/DD/20100524/DC-XMI>
 
   Class Font
     Attribute name : EString

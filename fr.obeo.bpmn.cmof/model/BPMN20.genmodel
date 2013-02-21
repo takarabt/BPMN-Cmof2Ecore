@@ -5,7 +5,7 @@
     modelPluginID="fr.obeo.bpmn.cmof" modelName="BPMN20" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>BPMN20.ecore</foreignModel>
-  <genPackages prefix="BPMN20" disposableProviderFactory="true" loadInitialization="true"
+  <genPackages prefix="Bpmn2" disposableProviderFactory="true" loadInitialization="true"
       literalsInterface="false" ecorePackage="BPMN20.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BPMN20.ecore#//ItemKind">
       <genEnumLiterals ecoreEnumLiteral="BPMN20.ecore#//ItemKind/Physical"/>
@@ -617,7 +617,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//Definitions/exporterVersion"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="BPMNDI" disposableProviderFactory="true" ecorePackage="BPMNDI.ecore#/">
+  <genPackages prefix="Bpmdi" disposableProviderFactory="true" ecorePackage="BPMNDI.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BPMNDI.ecore#//ParticipantBandKind">
       <genEnumLiterals ecoreEnumLiteral="BPMNDI.ecore#//ParticipantBandKind/top_initiating"/>
       <genEnumLiterals ecoreEnumLiteral="BPMNDI.ecore#//ParticipantBandKind/middle_initiating"/>
@@ -661,7 +661,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNDI.ecore#//BPMNDiagram/labelStyle"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="DI" disposableProviderFactory="true" ecorePackage="DI.ecore#/">
+  <genPackages prefix="Di" disposableProviderFactory="true" ecorePackage="DI.ecore#/">
     <genClasses image="false" ecoreClass="DI.ecore#//DiagramElement">
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference DI.ecore#//DiagramElement/owningDiagram"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference DI.ecore#//DiagramElement/owningElement"/>
@@ -703,7 +703,7 @@
       </genOperations>
     </genClasses>
   </genPackages>
-  <genPackages prefix="DC" disposableProviderFactory="true" ecorePackage="DC.ecore#/">
+  <genPackages prefix="Dc" disposableProviderFactory="true" ecorePackage="DC.ecore#/">
     <genClasses ecoreClass="DC.ecore#//Font">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DC.ecore#//Font/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DC.ecore#//Font/size"/>
